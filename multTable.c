@@ -4,7 +4,7 @@
 
 int main(int argc, char * argv[])
 {
-	if (argc <= 1)
+	if (argc <= 5)
 	{
 		printf("Usage: p1a2 string1 [stringN]\n");
 		exit(1);
