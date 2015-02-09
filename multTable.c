@@ -1,13 +1,33 @@
+//Adam Haag
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
+//Converts 2D array position  into continous heap address 
+int getElement(int x, int y, int dim)
+{
+	return (dim * y + x);
+}
 
-/* printTable:	contains implementation for allocation memory and
+/* printTable:	contains implementation for allocation of heap memory and
  *	printing multiplication table to the user*/ 
 void printTable(int d)
 {
-	printf("%d/n", d);
+	int* array;
+	int dimension = d*d;
+	int x, y;
+	array = (int *)malloc(sizeof(int)*dimension); 
+	for(x = 0; x < d; x++)
+	{
+		for(y = 0; y < d; y++)
+		{
+			//Set pieces of memory to correct value
+			*(array + getElement(x, y, d)) = ((x + 1) * (y + 1));
+			printf("%d\t", *(array + getElement(x, y, d)));
+		}
+		printf("\n");
+	}
+	free(array);
 }
 
 int main(int argc, char * argv[])
@@ -21,7 +41,6 @@ int main(int argc, char * argv[])
 	{
 		int i; //Value for holding choice given by user
 		i = atoi(*(argv + 1));
-		//printTable(i);
 		switch(i)
 		{
 			case 1:
