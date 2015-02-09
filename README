@@ -1,0 +1,13 @@
+Name: Adam Haag
+CSL-ID: ahaag
+Name: 
+CSL-ID: 
+(Leave the second name and ID blank if working alone)
+(Do NOT suffix your CSL IDs with @cs.wisc.edu, the ID alone is sufficient)
+
+Implementation Details:
+Made sure user input was a valid number 1-10. If not, use 10 
+and allocate heap space to fill a "2D-Array" with dimensions 
+of that size. Table is printed to user as it is assembled. Memory
+allocated is freed at end. 
+
